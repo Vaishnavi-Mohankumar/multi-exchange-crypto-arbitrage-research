@@ -1,0 +1,5 @@
+scenario,description,buf_pct,buy_leg,sell_leg
+base_taker_buf0.05,Standard base taker fees + 0.05% slippage buffer,0.05,taker,taker
+base_taker_no_buffer,Standard base taker fees without slippage buffer,0.0,taker,taker
+maker_both_legs,Maker fees on both buy and sell legs,0.05,maker,maker
+maker_buy_taker_sell,"Maker fee on buy leg, Taker fee on sell leg",0.05,maker,taker

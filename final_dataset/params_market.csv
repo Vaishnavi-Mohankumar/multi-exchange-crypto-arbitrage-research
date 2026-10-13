@@ -1,0 +1,15 @@
+exchange,pair,market_symbol,base_asset,quote_ccy,min_qty,qty_step,price_tick,min_notional,min_notional_unit,source_type,source_file
+binance,BTC/USDT,BTCUSDT,BTC,USDT,1e-05,1e-05,0.01,5.0,USDT,fetched_api,binance_exchangeInfo.json
+binance,ETH/USDT,ETHUSDT,ETH,USDT,0.0001,0.0001,0.01,5.0,USDT,fetched_api,binance_exchangeInfo.json
+coinbase,BTC/USDT,BTC-USD,BTC,USD,1e-08,1e-08,0.01,1.0,USD,fetched_api,coinbase_products.json
+coinbase,ETH/USDT,ETH-USD,ETH,USD,1e-08,1e-08,0.01,1.0,USD,fetched_api,coinbase_products.json
+kucoin,ETH/USDT,ETH-USDT,ETH,USDT,0.0001,1e-07,0.01,0.1,USDT,fetched_api,kucoin_symbols.json
+kucoin,BTC/USDT,BTC-USDT,BTC,USDT,1e-05,1e-08,0.1,0.1,USDT,fetched_api,kucoin_symbols.json
+bitfinex,BTC/USDT,BTCUST,BTC,USDT,4e-05,1e-05,0.01,1.0,USDT,fetched_api,bitfinex_info_pair.json
+bitfinex,ETH/USDT,ETHUST,ETH,USDT,0.0008,0.0001,0.01,1.0,USDT,fetched_api,bitfinex_info_pair.json
+bybit,BTC/USDT,BTCUSDT,BTC,USDT,1e-06,1e-06,0.1,5.0,USDT,fetched_api,bybit_instruments_info.json
+bybit,ETH/USDT,ETHUSDT,ETH,USDT,1e-05,1e-05,0.01,5.0,USDT,fetched_api,bybit_instruments_info.json
+htx,ETH/USDT,ethusdt,ETH,USDT,0.0001,0.0001,0.01,1.0,USDT,fetched_api,htx_symbols.json
+htx,BTC/USDT,btcusdt,BTC,USDT,1e-05,1e-06,0.01,1.0,USDT,fetched_api,htx_symbols.json
+cryptocom,BTC/USDT,BTC_USDT,BTC,USDT,1e-05,1e-05,0.01,1.0,USDT,fetched_api,cryptocom_instruments.json
+cryptocom,ETH/USDT,ETH_USDT,ETH,USDT,0.0001,0.0001,0.01,1.0,USDT,fetched_api,cryptocom_instruments.json

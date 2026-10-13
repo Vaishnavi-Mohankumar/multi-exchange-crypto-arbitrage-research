@@ -1,0 +1,11 @@
+exchange,pair,half_spread_pct,buy_slippage_pct,sell_slippage_pct,proposed_spread_buffer_pct,sample_size,duration_minutes,data_source
+binance,BTC/USDT,6e-06,6e-06,6e-06,1.2e-05,360,30,live_measured_today
+binance,ETH/USDT,0.000201,0.000201,0.000201,0.000402,360,30,live_measured_today
+bybit,BTC/USDT,6e-05,6e-05,6e-05,0.00012,360,30,live_measured_today
+bybit,ETH/USDT,0.000201,0.000201,0.000201,0.000402,360,30,live_measured_today
+coinbase,BTC/USDT,6e-06,6e-06,0.000976,0.000982,360,30,live_measured_today
+coinbase,ETH/USDT,0.002294,0.002591,0.002624,0.004918,360,30,live_measured_today
+cryptocom,BTC/USDT,6e-06,6e-06,3.7e-05,4.3e-05,360,30,live_measured_today
+cryptocom,ETH/USDT,0.000201,0.000321,0.00204,0.002241,360,30,live_measured_today
+htx,BTC/USDT,6e-06,0.002503,0.000439,0.002509,360,30,live_measured_today
+htx,ETH/USDT,0.000884,0.00497,0.004488,0.005854,360,30,live_measured_today

@@ -1,0 +1,84 @@
+{
+  "package_name": "final_dataset",
+  "utc_generated": "2026-10-09T20:30:00Z",
+  "files": [
+    {
+      "file_name": "milp_master.csv",
+      "row_count": 141120,
+      "file_size_bytes": 35832855,
+      "sha256": "e186249ddd979023320635e40f56dddf30f4bad40cddea87a0cf6cbff5ab41ee"
+    },
+    {
+      "file_name": "params_fees.csv",
+      "row_count": 42,
+      "file_size_bytes": 5500,
+      "sha256": "a5a883d0a48faa99f32d3af1df2ff7872b27f5245e133fa7c5e6260168bb8c5e"
+    },
+    {
+      "file_name": "params_market.csv",
+      "row_count": 14,
+      "file_size_bytes": 1484,
+      "sha256": "5d713f1a060a5555c96d6d0c2f356593551c3bfcc447ffeb741fca2ab83e1e45"
+    },
+    {
+      "file_name": "transfer_routes.csv",
+      "row_count": 168,
+      "file_size_bytes": 9543,
+      "sha256": "95aefc6fe1a3a114980036154bda03fda0b452cd095f7b3133157c86455a5c81"
+    },
+    {
+      "file_name": "initial_inventory.csv",
+      "row_count": 21,
+      "file_size_bytes": 1011,
+      "sha256": "5e5a26e954b870ea2c52b2bf93f83db5a2eddb154709affc93eea07c8475518a"
+    },
+    {
+      "file_name": "fee_scenarios.csv",
+      "row_count": 4,
+      "file_size_bytes": 376,
+      "sha256": "37a0d59edf07a881b0a3be8db7773833a4a720e490291501af28c8417acd7f4f"
+    },
+    {
+      "file_name": "slippage_calibration.csv",
+      "row_count": 10,
+      "file_size_bytes": 899,
+      "sha256": "d83f9fcd81727eb79049837d299ed54dacbea96241cd9b03ed0621cd34e7900f"
+    },
+    {
+      "file_name": "prices_close_wide_BTC.csv",
+      "row_count": 10080,
+      "file_size_bytes": 906482,
+      "sha256": "03894e437fff398506379975181fca300ee75484e086a431ad7c759d14d94039"
+    },
+    {
+      "file_name": "prices_close_wide_ETH.csv",
+      "row_count": 10080,
+      "file_size_bytes": 875099,
+      "sha256": "0cedb88b016b8195ec4fb53b7dafc611b7b92a8782a113429ce45a21ed328d42"
+    },
+    {
+      "file_name": "prices_resampled_5m.csv",
+      "row_count": 28224,
+      "file_size_bytes": 3543154,
+      "sha256": "daa0906fa28bdb0ffdbbed5061af9b79024b02132e723ad9c0093349ffb89814"
+    },
+    {
+      "file_name": "prices_resampled_15m.csv",
+      "row_count": 9408,
+      "file_size_bytes": 1186093,
+      "sha256": "3de1ee6b3fc76695ad5ece09f32d14f6344cb7c4408b24028d18df4ebb65567e"
+    },
+    {
+      "file_name": "prices_1day_slice.csv",
+      "row_count": 20160,
+      "file_size_bytes": 3187225,
+      "sha256": "b5ba6978def428931789dabdbb622e83cf904ac564240298e6fde33dd30b13c2"
+    },
+    {
+      "file_name": "DATA_DICTIONARY.md",
+      "row_count": 0,
+      "file_size_bytes": 3960,
+      "sha256": "e14d99d937a8101ab87944631f58da2b7684226c99fb0bcea9773b91c38aadfc"
+    }
+  ]
+}
