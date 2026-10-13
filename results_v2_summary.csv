@@ -1,0 +1,9 @@
+scenario,total_profit_usdt,buys,sells,transfers,windows_not_proven_optimal,worst_gap,max_runtime_sec,all_replay_ok
+base_taker_buf,0.0,0,0,0,0,0.0,0.783,True
+base_taker_nobuf,0.0,0,0,0,0,0.0,0.705,True
+maker_both_legs,0.0,0,0,0,0,0.0,0.784,True
+hyp_fee0.05_buf0.01,36.6031,20,42,23,3,0.0863988628276398,120.085,False
+hyp_fee0.05_buf0.01_no_transfers,14.8037,8,10,0,0,0.005887500001415479,0.717,True
+hyp_fee0.05_buf0.01_inv2x,118.0311,19,32,30,3,0.06524898004982511,120.14,True
+hyp_fee0.02_buf0.01,1208.6713,146,200,174,4,0.06766974526402127,120.138,True
+hyp_fee0.00_buf0.00,5344.7653,655,727,357,7,1.1756957649682045,120.449,False
