@@ -42,17 +42,20 @@ df=load();ev=getres();runs=ev.get("runs",[]);days=sorted(df.ts.dt.date.unique())
 with st.sidebar:
  st.markdown("### ◈ ASTER");st.caption("Operations research · Financial engineering")
  page=st.radio("Workspace",["Overview","Opportunity lab","MILP optimizer","Data & methodology"],label_visibility="collapsed")
- st.divider();pair=st.selectbox("Asset market",["BTC/USDT","ETH/USDT"])
+ st.divider();pair=st.selectbox("Asset market",["BTC/USDT","ETH/USDT"],index=1)
  span=st.date_input("UTC study window",value=(days[0],days[-1]),min_value=days[0],max_value=days[-1])
  if isinstance(span,(tuple,list)) and len(span)==2:first,last=span
  elif isinstance(span,(tuple,list)) and len(span)==1:first=last=span[0]
  else:first=last=span
  if first>last:first,last=last,first
  st.divider();st.caption("LOCAL DATA · 02–08 OCT 2026")
-d=subset(df,pair,first,last);base=next((x for x in runs if x["scenario"]["name"]=="base_taker_buf"),{})
+d=subset(df,pair,first,last)
+if pair=="ETH/USDT" and (R/"results_eth_sample.json").exists():runs=json.loads((R/"results_eth_sample.json").read_text(encoding="utf-8"))["runs"]
+base=next((x for x in runs if x["scenario"]["name"]=="base_taker_buf"),{})
 st.markdown(f'<div class="hero"><div class="kicker">ASTER · RESEARCH TERMINAL · LOCAL / MILP</div><h1>{page}</h1><p>{pair} · {first:%d %b} – {last:%d %b %Y} UTC · 7 exchanges</p></div>',unsafe_allow_html=True)
 if page=="Overview":
- t=base.get("per_day",[]);positive_case=next((x for x in runs if x["scenario"]["name"]=="hyp_fee0.05_buf0.01_no_transfers"),{});a,b,c,e,f=st.columns(5);a.metric("Audited baseline P&L",cash(base.get("total_profit_usdt",0)),"7-day MILP",border=True);b.metric("Modeled profit · hypothetical",cash(positive_case.get("total_profit_usdt",0)),"0.05% fee · 0.01% buffer · no transfers",border=True);c.metric("Market observations",f"{len(d):,}","filtered",border=True);e.metric("UTC coverage",f"{df.ts.nunique()/10080:.1%}","10,080-minute grid",border=True);f.metric("Solve time",f"{np.mean([x['runtime_sec'] for x in t]):.2f}s","per day",border=True)
+ t=base.get("per_day",[]);positive_case=next((x for x in runs if x["scenario"]["name"]=="hyp_fee0.05_buf0.01_no_transfers"),{});a,b,c,e,f=st.columns(5);a.metric("Audited baseline P&L",cash(base.get("total_profit_usdt",0)),"7-day MILP",border=True);b.metric("ETH-only modeled profit · hypothetical" if pair=="ETH/USDT" else "Modeled profit · hypothetical",cash(positive_case.get("total_profit_usdt",0)),"0.05% fee · 0.01% buffer · no transfers",border=True);c.metric("Market observations",f"{len(d):,}","filtered",border=True);e.metric("UTC coverage",f"{df.ts.nunique()/10080:.1%}","10,080-minute grid",border=True);f.metric("Solve time",f"{np.mean([x['runtime_sec'] for x in t]):.2f}s","per day",border=True)
+ if pair=="ETH/USDT":st.info("ETH-only sample · 02–08 Oct 2026. The audited standard-fee baseline is $0.00. The $4.32 result assumes 0.05% fees per leg, a 0.01% execution buffer per leg, and no transfers; replay passed on all 7 daily windows. Hypothetical backtest result, not realized or guaranteed profit.")
  l,r=st.columns([1.6,1])
  with l:
   st.subheader("Cross-exchange price path");x=d[d.ts.dt.minute.isin([0,30])]
@@ -152,7 +155,7 @@ else:
   st.write("Buy/sell quantities and binaries; USDT/BTC/ETH inventory; 5% volume cap; $5 minimum notional; mutually exclusive buy/sell; per-step market neutrality; fixed withdrawal fees and transfer lags. Each day restarts with configured inventory.")
   fees=pd.read_csv(D/"params_fees.csv");fees=fees[fees.fee_type.isin(["taker_fee_pct","maker_fee_pct"])][["exchange","fee_type","fee_value","unit","source_type"]];st.dataframe(fees,hide_index=True,width="stretch",alt="Fees and provenance")
  with t3:
-  st.markdown("Inputs: final_dataset market master, transfer routes, initial inventory. Evidence: results_v2.json. Formulation: MODEL.md and DECISIONS.md.")
+  st.markdown("Inputs: final_dataset market master, transfer routes, initial inventory. Evidence: results_v2.json; the ETH-only sensitivity run is saved in results_eth_sample.json. Formulation: MODEL.md and DECISIONS.md.")
   st.warning("Seven-day sample; candle closes are not firm simultaneous order-book quotes; depth is unavailable; USD/USDT conversion and timestamp mismatch affect spreads; transfer times are assumptions. No live profitability is established.")
   st.markdown("PDF pages 22–30 report positive returns that conflict with the final audited package; this UI uses results_v2.json.")
   with st.expander("Solver provenance"):st.json({k:ev.get(k) for k in ["grid","days","exchanges","scipy_version","assumed_parameters"]})

@@ -1,0 +1,501 @@
+{
+  "grid": "30min",
+  "days": 7,
+  "exchanges": [
+    "binance",
+    "coinbase",
+    "kucoin",
+    "bitfinex",
+    "bybit",
+    "htx",
+    "cryptocom"
+  ],
+  "assumed_parameters": [
+    "usdt_withdrawal_fee_usdt: ['coinbase', 'bitfinex'] filled with median 1.5",
+    "btc_withdrawal_fee_btc: ['coinbase'] filled with median 0.0005",
+    "eth_withdrawal_fee_eth: ['coinbase'] filled with median 0.00155"
+  ],
+  "initial_inventory_per_exchange": {
+    "USDT": 10000.0,
+    "BTC": 0.1,
+    "ETH": 1.0
+  },
+  "min_notional": 5.0,
+  "scipy_version": "1.18.1",
+  "runs": [
+    {
+      "scenario": {
+        "name": "base_taker_buf",
+        "mode": "taker",
+        "buffer_pct": 0.05,
+        "transfer_every": 2
+      },
+      "total_profit_usdt": 0.0,
+      "total_solver_objective": 0.0,
+      "all_replay_ok": true,
+      "per_day": [
+        {
+          "n_vars": 9662,
+          "n_constraints": 5767,
+          "n_binaries": 4326,
+          "status_code": 0,
+          "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "runtime_sec": 0.436,
+          "mip_gap": 0.0,
+          "note": null,
+          "solver_objective": 0.0,
+          "replay_objective": 0.0,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_transfers": 0,
+          "max_constraint_violation": 2.9103830456733704e-11,
+          "max_integrality_deviation": 0.0,
+          "min_inventory_after_replay": 0.1,
+          "per_period_neutral_ok": true,
+          "base_change_btc_eth": [
+            0.0,
+            0.0
+          ],
+          "replay_ok": true,
+          "day": "2026-10-02",
+          "trade_sample": []
+        },
+        {
+          "n_vars": 9662,
+          "n_constraints": 5767,
+          "n_binaries": 4326,
+          "status_code": 0,
+          "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "runtime_sec": 0.445,
+          "mip_gap": 0.0,
+          "note": null,
+          "solver_objective": 0.0,
+          "replay_objective": 0.0,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_transfers": 0,
+          "max_constraint_violation": 0.0,
+          "max_integrality_deviation": 0.0,
+          "min_inventory_after_replay": 0.1,
+          "per_period_neutral_ok": true,
+          "base_change_btc_eth": [
+            0.0,
+            0.0
+          ],
+          "replay_ok": true,
+          "day": "2026-10-03",
+          "trade_sample": []
+        },
+        {
+          "n_vars": 9662,
+          "n_constraints": 5767,
+          "n_binaries": 4326,
+          "status_code": 0,
+          "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "runtime_sec": 0.453,
+          "mip_gap": 0.0,
+          "note": null,
+          "solver_objective": 0.0,
+          "replay_objective": 0.0,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_transfers": 0,
+          "max_constraint_violation": 2.9103830456733704e-11,
+          "max_integrality_deviation": 0.0,
+          "min_inventory_after_replay": 0.1,
+          "per_period_neutral_ok": true,
+          "base_change_btc_eth": [
+            0.0,
+            0.0
+          ],
+          "replay_ok": true,
+          "day": "2026-10-04",
+          "trade_sample": []
+        },
+        {
+          "n_vars": 9662,
+          "n_constraints": 5767,
+          "n_binaries": 4326,
+          "status_code": 0,
+          "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "runtime_sec": 0.427,
+          "mip_gap": 0.0,
+          "note": null,
+          "solver_objective": 0.0,
+          "replay_objective": 0.0,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_transfers": 0,
+          "max_constraint_violation": 2.9103830456733704e-11,
+          "max_integrality_deviation": 0.0,
+          "min_inventory_after_replay": 0.1,
+          "per_period_neutral_ok": true,
+          "base_change_btc_eth": [
+            0.0,
+            0.0
+          ],
+          "replay_ok": true,
+          "day": "2026-10-05",
+          "trade_sample": []
+        },
+        {
+          "n_vars": 9662,
+          "n_constraints": 5767,
+          "n_binaries": 4326,
+          "status_code": 0,
+          "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "runtime_sec": 0.438,
+          "mip_gap": 0.0,
+          "note": null,
+          "solver_objective": -0.0,
+          "replay_objective": 0.0,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_transfers": 0,
+          "max_constraint_violation": 5.820766091346741e-11,
+          "max_integrality_deviation": 0.0,
+          "min_inventory_after_replay": 0.1,
+          "per_period_neutral_ok": true,
+          "base_change_btc_eth": [
+            0.0,
+            0.0
+          ],
+          "replay_ok": true,
+          "day": "2026-10-06",
+          "trade_sample": []
+        },
+        {
+          "n_vars": 9662,
+          "n_constraints": 5767,
+          "n_binaries": 4326,
+          "status_code": 0,
+          "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "runtime_sec": 0.48,
+          "mip_gap": 0.0,
+          "note": null,
+          "solver_objective": 0.0,
+          "replay_objective": 0.0,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_transfers": 0,
+          "max_constraint_violation": 0.0,
+          "max_integrality_deviation": 0.0,
+          "min_inventory_after_replay": 0.1,
+          "per_period_neutral_ok": true,
+          "base_change_btc_eth": [
+            0.0,
+            0.0
+          ],
+          "replay_ok": true,
+          "day": "2026-10-07",
+          "trade_sample": []
+        },
+        {
+          "n_vars": 9662,
+          "n_constraints": 5767,
+          "n_binaries": 4326,
+          "status_code": 0,
+          "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "runtime_sec": 0.437,
+          "mip_gap": 0.0,
+          "note": null,
+          "solver_objective": -0.0,
+          "replay_objective": 0.0,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_transfers": 0,
+          "max_constraint_violation": 0.0,
+          "max_integrality_deviation": 0.0,
+          "min_inventory_after_replay": 0.1,
+          "per_period_neutral_ok": true,
+          "base_change_btc_eth": [
+            0.0,
+            0.0
+          ],
+          "replay_ok": true,
+          "day": "2026-10-08",
+          "trade_sample": []
+        }
+      ]
+    },
+    {
+      "scenario": {
+        "name": "hyp_fee0.05_buf0.01_no_transfers",
+        "mode": "override",
+        "fee_pct": 0.05,
+        "buffer_pct": 0.01,
+        "transfers": false,
+        "transfer_every": 2
+      },
+      "total_profit_usdt": 4.3243,
+      "total_solver_objective": 4.3243,
+      "all_replay_ok": true,
+      "per_day": [
+        {
+          "n_vars": 3698,
+          "n_constraints": 2785,
+          "n_binaries": 1344,
+          "status_code": 0,
+          "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "runtime_sec": 0.707,
+          "mip_gap": 0.0,
+          "note": null,
+          "solver_objective": 3.247,
+          "replay_objective": 3.247,
+          "n_buy": 2,
+          "n_sell": 4,
+          "n_transfers": 0,
+          "max_constraint_violation": 3.024399624299036e-11,
+          "max_integrality_deviation": 0.0,
+          "min_inventory_after_replay": -0.0,
+          "per_period_neutral_ok": true,
+          "base_change_btc_eth": [
+            0.0,
+            0.0
+          ],
+          "replay_ok": true,
+          "day": "2026-10-02",
+          "trade_sample": [
+            {
+              "t": 10,
+              "side": "buy",
+              "exchange": "bitfinex",
+              "pair": "ETH/USDT",
+              "qty": 1.6742543124004488,
+              "price": 2724.2
+            },
+            {
+              "t": 11,
+              "side": "buy",
+              "exchange": "bitfinex",
+              "pair": "ETH/USDT",
+              "qty": 2.000000000000002,
+              "price": 2716.5
+            },
+            {
+              "t": 10,
+              "side": "sell",
+              "exchange": "coinbase",
+              "pair": "ETH/USDT",
+              "qty": 0.999999999999998,
+              "price": 2728.342203193149
+            },
+            {
+              "t": 10,
+              "side": "sell",
+              "exchange": "bybit",
+              "pair": "ETH/USDT",
+              "qty": 0.6742543124004479,
+              "price": 2728.17
+            },
+            {
+              "t": 11,
+              "side": "sell",
+              "exchange": "binance",
+              "pair": "ETH/USDT",
+              "qty": 1.0000000000000029,
+              "price": 2720.65
+            },
+            {
+              "t": 11,
+              "side": "sell",
+              "exchange": "kucoin",
+              "pair": "ETH/USDT",
+              "qty": 0.9999999999999993,
+              "price": 2720.78
+            }
+          ]
+        },
+        {
+          "n_vars": 3698,
+          "n_constraints": 2785,
+          "n_binaries": 1344,
+          "status_code": 0,
+          "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "runtime_sec": 0.129,
+          "mip_gap": 0.0,
+          "note": null,
+          "solver_objective": -0.0,
+          "replay_objective": 0.0,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_transfers": 0,
+          "max_constraint_violation": 2.9103830456733704e-11,
+          "max_integrality_deviation": 0.0,
+          "min_inventory_after_replay": 0.1,
+          "per_period_neutral_ok": true,
+          "base_change_btc_eth": [
+            0.0,
+            0.0
+          ],
+          "replay_ok": true,
+          "day": "2026-10-03",
+          "trade_sample": []
+        },
+        {
+          "n_vars": 3698,
+          "n_constraints": 2785,
+          "n_binaries": 1344,
+          "status_code": 0,
+          "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "runtime_sec": 0.129,
+          "mip_gap": 0.0,
+          "note": null,
+          "solver_objective": 0.0,
+          "replay_objective": 0.0,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_transfers": 0,
+          "max_constraint_violation": 2.9103830456733704e-11,
+          "max_integrality_deviation": 0.0,
+          "min_inventory_after_replay": 0.1,
+          "per_period_neutral_ok": true,
+          "base_change_btc_eth": [
+            0.0,
+            0.0
+          ],
+          "replay_ok": true,
+          "day": "2026-10-04",
+          "trade_sample": []
+        },
+        {
+          "n_vars": 3698,
+          "n_constraints": 2785,
+          "n_binaries": 1344,
+          "status_code": 0,
+          "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "runtime_sec": 0.126,
+          "mip_gap": 0.0,
+          "note": null,
+          "solver_objective": -0.0,
+          "replay_objective": 0.0,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_transfers": 0,
+          "max_constraint_violation": 7.271594657388993e-11,
+          "max_integrality_deviation": 0.0,
+          "min_inventory_after_replay": 0.1,
+          "per_period_neutral_ok": true,
+          "base_change_btc_eth": [
+            0.0,
+            0.0
+          ],
+          "replay_ok": true,
+          "day": "2026-10-05",
+          "trade_sample": []
+        },
+        {
+          "n_vars": 3698,
+          "n_constraints": 2785,
+          "n_binaries": 1344,
+          "status_code": 0,
+          "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "runtime_sec": 0.139,
+          "mip_gap": 0.0,
+          "note": null,
+          "solver_objective": 0.0,
+          "replay_objective": 0.0,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_transfers": 0,
+          "max_constraint_violation": 5.820766091346741e-11,
+          "max_integrality_deviation": 0.0,
+          "min_inventory_after_replay": 0.1,
+          "per_period_neutral_ok": true,
+          "base_change_btc_eth": [
+            0.0,
+            0.0
+          ],
+          "replay_ok": true,
+          "day": "2026-10-06",
+          "trade_sample": []
+        },
+        {
+          "n_vars": 3698,
+          "n_constraints": 2785,
+          "n_binaries": 1344,
+          "status_code": 0,
+          "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "runtime_sec": 0.149,
+          "mip_gap": 0.0,
+          "note": null,
+          "solver_objective": 0.0,
+          "replay_objective": 0.0,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_transfers": 0,
+          "max_constraint_violation": 2.5450581300861476e-11,
+          "max_integrality_deviation": 0.0,
+          "min_inventory_after_replay": 0.1,
+          "per_period_neutral_ok": true,
+          "base_change_btc_eth": [
+            0.0,
+            0.0
+          ],
+          "replay_ok": true,
+          "day": "2026-10-07",
+          "trade_sample": []
+        },
+        {
+          "n_vars": 3698,
+          "n_constraints": 2785,
+          "n_binaries": 1344,
+          "status_code": 0,
+          "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "runtime_sec": 0.777,
+          "mip_gap": 0.0,
+          "note": null,
+          "solver_objective": 1.0773,
+          "replay_objective": 1.0773,
+          "n_buy": 2,
+          "n_sell": 2,
+          "n_transfers": 0,
+          "max_constraint_violation": 1.0785221604692196e-10,
+          "max_integrality_deviation": 0.0,
+          "min_inventory_after_replay": -0.0,
+          "per_period_neutral_ok": true,
+          "base_change_btc_eth": [
+            0.0,
+            0.0
+          ],
+          "replay_ok": true,
+          "day": "2026-10-08",
+          "trade_sample": [
+            {
+              "t": 1,
+              "side": "buy",
+              "exchange": "coinbase",
+              "pair": "ETH/USDT",
+              "qty": 0.9999999999999993,
+              "price": 2575.5507974306124
+            },
+            {
+              "t": 47,
+              "side": "buy",
+              "exchange": "bitfinex",
+              "pair": "ETH/USDT",
+              "qty": 1.000000000000003,
+              "price": 2472.5
+            },
+            {
+              "t": 1,
+              "side": "sell",
+              "exchange": "bitfinex",
+              "pair": "ETH/USDT",
+              "qty": 0.9999999999999976,
+              "price": 2579.2
+            },
+            {
+              "t": 47,
+              "side": "sell",
+              "exchange": "htx",
+              "pair": "ETH/USDT",
+              "qty": 1.0000000000000033,
+              "price": 2475.99
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
