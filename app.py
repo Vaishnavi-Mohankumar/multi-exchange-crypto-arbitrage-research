@@ -52,7 +52,7 @@ with st.sidebar:
 d=subset(df,pair,first,last);base=next((x for x in runs if x["scenario"]["name"]=="base_taker_buf"),{})
 st.markdown(f'<div class="hero"><div class="kicker">ASTER · RESEARCH TERMINAL · LOCAL / MILP</div><h1>{page}</h1><p>{pair} · {first:%d %b} – {last:%d %b %Y} UTC · 7 exchanges</p></div>',unsafe_allow_html=True)
 if page=="Overview":
- t=base.get("per_day",[]);a,b,c,e=st.columns(4);a.metric("Audited baseline P&L",cash(base.get("total_profit_usdt",0)),"7-day MILP",border=True);b.metric("Market observations",f"{len(d):,}","filtered",border=True);c.metric("UTC coverage",f"{df.ts.nunique()/10080:.1%}","10,080-minute grid",border=True);e.metric("Solve time",f"{np.mean([x['runtime_sec'] for x in t]):.2f}s","per day",border=True)
+ t=base.get("per_day",[]);positive_case=next((x for x in runs if x["scenario"]["name"]=="hyp_fee0.05_buf0.01_no_transfers"),{});a,b,c,e,f=st.columns(5);a.metric("Audited baseline P&L",cash(base.get("total_profit_usdt",0)),"7-day MILP",border=True);b.metric("Modeled profit · hypothetical",cash(positive_case.get("total_profit_usdt",0)),"0.05% fee · 0.01% buffer · no transfers",border=True);c.metric("Market observations",f"{len(d):,}","filtered",border=True);e.metric("UTC coverage",f"{df.ts.nunique()/10080:.1%}","10,080-minute grid",border=True);f.metric("Solve time",f"{np.mean([x['runtime_sec'] for x in t]):.2f}s","per day",border=True)
  l,r=st.columns([1.6,1])
  with l:
   st.subheader("Cross-exchange price path");x=d[d.ts.dt.minute.isin([0,30])]
